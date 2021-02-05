@@ -12,10 +12,12 @@ int main(void)
 	while (b <= 9)
 	{
 		int a = b + 1;
-	while (a <= 9)
+
+		while (a <= 9)
 	{
 		int c = a + 1;
-		while(c <= 9)
+
+		while (c <= 9)
 		{
 		putchar((b) + 48);
 		putchar((a) + 48);

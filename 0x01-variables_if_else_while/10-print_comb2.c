@@ -7,19 +7,23 @@
 
 int main(void)
 {
-	int a = 0;
-	char b = 97;
+	int b = 0;
 
+	while (b <= 9)
+	{
+		int a = 0;
 	while (a <= 9)
 	{
+		putchar((b) + 48);
 		putchar((a) + 48);
-		a++;
+		if (a + b != 18)
+		{
+			putchar(44);
+			putchar(32);
+		}
+			a++;
 	}
-
-	while (b <= 102)
-	{
-		putchar(b);
-		b++;
+	b++;
 	}
 	putchar('\n');
 	return (0);

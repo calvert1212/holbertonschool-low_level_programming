@@ -8,18 +8,16 @@
 int main(void)
 {
 	int a = 0;
-	char b = 97;
 
 	while (a <= 9)
 	{
 		putchar((a) + 48);
+		if (a != 9)
+		{
+			putchar(44);
+			putchar(32);
+		}
 		a++;
-	}
-
-	while (b <= 102)
-	{
-		putchar(b);
-		b++;
 	}
 	putchar('\n');
 	return (0);

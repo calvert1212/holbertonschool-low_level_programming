@@ -11,7 +11,7 @@ void print_alphabet_x10(void)
 
 	int tenX = 0;
 
-	while (tenX <= 10)
+	while (tenX <= 9)
 	{
 		int a = 97;
 

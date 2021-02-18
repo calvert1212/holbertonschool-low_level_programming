@@ -1,6 +1,12 @@
 #include "holberton.h"
 #include <stdio.h>
 
+/**
+ * puts2 - Puts string
+ * @str: input string
+ * Return: void
+ */
+
 void puts2(char *str)
 {
 	int i = 0;

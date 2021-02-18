@@ -11,7 +11,7 @@ void rev_string(char *s)
 {
 	char *hold = s;
 	char out;
-	
+
 	while (*hold != 0)
 		hold++
 	while (hold > s)

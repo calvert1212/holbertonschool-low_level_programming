@@ -2,7 +2,8 @@
 
 /**
  * jack_bauer - print every minute of 24 hours
- *                                                                              * Return: void
+ *
+ * Return: void
  */
 
 void jack_bauer(void)

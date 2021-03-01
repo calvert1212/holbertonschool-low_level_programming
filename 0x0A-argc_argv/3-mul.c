@@ -10,14 +10,14 @@
 
 int main(int argc, char *argv[])
 {
-	int i, x = 1;
+	int i;
+	int x = 1;
 
 	if (argc > 2)
 	{
-		while (i < argc)
+		for (i = 1; i < argc; i++)
 		{
 			x = x *atoi(argv[i]);
-			i++;
 		}
 	}
 	else

@@ -1,0 +1,13 @@
+#include <stsdio.h>
+#include <stdlib.h>
+#include "holbertion.h"
+
+char *strconcat(char *s1, char *s2)
+{
+	char new[];
+	int count;
+	
+	if (str = NULL)
+		return (NULL);
+	
+}

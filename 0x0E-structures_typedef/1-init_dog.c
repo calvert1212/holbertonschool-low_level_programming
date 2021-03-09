@@ -3,7 +3,7 @@
 
 /**
  * init_dog - Initializes a dog structure
- * @dog: the structure
+ * @d: the structure
  * @name: string of dog name
  * @age: float of dog age
  * @owner: string of owner name

@@ -1,1 +1,1 @@
-Learning about function pointers!
+Learning function pointers!

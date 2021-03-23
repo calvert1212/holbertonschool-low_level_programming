@@ -2,18 +2,16 @@
 
 char void _strcat(char *dest, char *src)
 {
-char *letter = *dest;
 char *s = *src;
-  
-while(*d != '\0')
+while(*dest != '\0')
 {
-d++;
+dest++;
 }
-while(*s != '\0')
+while(*src != '\0')
 {
-*d = s;
-s++;
-d++;
+*dest = src;
+src++;
+dest++;
 }
 return 0;
 }

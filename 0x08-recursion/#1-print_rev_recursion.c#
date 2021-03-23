@@ -1,0 +1,21 @@
+#include "holberton.h"
+
+/**
+ * _puts_recursion: Prints a string in reverse
+ * @s: the string
+ * Return: void
+ */
+
+void _print_rev_recursion(char *s)
+{
+	int count = 0;
+	
+	if (*s != '\0')
+	{
+		count++;
+		_putchar('\n');
+		return;
+	}
+	_putchar(*s);
+	_puts_recursion(s + 1);
+}

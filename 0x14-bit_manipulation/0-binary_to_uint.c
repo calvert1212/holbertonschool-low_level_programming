@@ -3,9 +3,9 @@
 #include "holberton.h"
 
 /**
- * binary_to_uint - Converts a binary number to unsigned int 
+ * binary_to_uint - Converts a binary number to unsigned int
  * @b: char of the binary number to convert
- * Return: converted number, or 0 if there is one or more 
+ * Return: converted number, or 0 if there is one or more
  * chars in the string
  */
 
@@ -25,7 +25,7 @@ while (i >= 0)
 if (b[i] != 48 && b[i] != 49)
 return (0);
 
-if (b[i] == 49)  
+if (b[i] == 49)
 x += count;
 count = count << 1;
 i--;

@@ -1,0 +1,43 @@
+#include "holberton.h"
+
+/**
+ * _cp - Copies content of a file to another
+ * @argc: Number of command line arguments
+ * @argv: Source file and file to copy to
+ * Return: 0 on success
+ */
+
+int main(int argc, char *argv[])
+{
+	int fd_src, fd_dest, writecheck, readcheck, closecheck;
+	char buff[1024];
+
+	if (argc != 3)
+		dprintf(STDERR_FILENO, "Usage: cp file_from file_to\n"), exit(97);
+	fd_src = open(argv[1], O_RDONLY);
+	if (fd_src == -1)
+	{dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]);
+		exit(98); }
+	fd_dest = open(argv[2], O_TRUNC | O_CREAT | O_WRONLY, 0664);
+	if (fd_dest == -1)
+		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]), exit(99);
+	while ((readcheck = read(fd_src, buff, 1024)) > 0)
+	{
+		writecheck = write(fd_dest, buff, readcheck);
+		if (writecheck == -1)
+		{
+			dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]);
+			close(fd_src), close(fd_dest), exit(99);
+		}
+	}
+	if (readcheck == -1)
+	{dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]);
+		exit(98); }
+	closecheck = close(fd_src);
+	if (closecheck == -1)
+		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fd_src), exit(100);
+	closecheck = close(fd_dest);
+	if (closecheck == -1)
+		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fd_dest), exit(100);
+	return (0);
+}

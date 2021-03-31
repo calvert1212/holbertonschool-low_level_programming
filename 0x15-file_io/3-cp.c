@@ -1,7 +1,7 @@
 #include "holberton.h"
 
 /**
- * _cp - Copies content of a file to another
+ * main - Copies content of a file to another
  * @argc: Number of command line arguments
  * @argv: Source file and file to copy to
  * Return: 0 on success
@@ -9,7 +9,8 @@
 
 int main(int argc, char *argv[])
 {
-	int fd_src, fd_dest, writecheck, readcheck, closecheck;
+	int fd_src, fd_dest, writecheck, closecheck;
+	int readcheck = 1;
 	char buff[1024];
 
 	if (argc != 3)

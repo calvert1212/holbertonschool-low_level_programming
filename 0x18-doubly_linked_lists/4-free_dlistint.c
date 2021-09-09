@@ -1,10 +1,11 @@
-include "lists.h"
+#include "lists.h"
 
 /**
  * free_dlistint - frees list
- * @head: head of the list
+ * @head: head list
  * Return:void
  */
+
 void free_dlistint(dlistint_t *head)
 {
   dlistint_t *start, *check;

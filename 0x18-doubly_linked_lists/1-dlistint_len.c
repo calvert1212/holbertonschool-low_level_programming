@@ -7,7 +7,7 @@
  */
 
 
-size_t dlistint_len(const dlistint_t *head)
+size_t dlistint_len(const dlistint_t *h)
 {
   const dlistint_t *xhead = head;
   size_t c = 0;

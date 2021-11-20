@@ -1,4 +1,4 @@
-ifndef MAIN_H
+#ifndef MAIN_H
 #define MAIN_H
 
 #include <stdio.h>
@@ -10,8 +10,9 @@ ifndef MAIN_H
 
 int _putchar(char *c);
 size_t _strlen(char *c);
-ssize_t read_textfile(const char *src, size_t len);
-int create_file(const char *src, char *t);
-int append_text_to_file(const char *src, char *t);
+ssize_t read_textfile(const char *src, size_t l);
+int create_file(const char *src, char *text);
+int append_text_to_file(const char *src, char *text);
+unsigned int lit_to_big_endian(unsigned int x);
 
 #endif

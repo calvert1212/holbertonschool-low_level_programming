@@ -4,7 +4,6 @@
 * get_dnodeint_at_index - get node at index
 * @head: Head of the list
 * @index: Index of the list
-*
 * Return: Given node at index, NULL on fail
 */
 
@@ -19,10 +18,10 @@ while (y != NULL)
 x++;
 y = y->next;
 }
-
 if (index > x)
+{
 return (NULL);
-
+}
 y = head;
 for (i = 0; i < index; i++)
 y = y->next;

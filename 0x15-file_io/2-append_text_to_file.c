@@ -7,20 +7,22 @@
  *
  * Return: 1 on success and -1 on failure
  */
-int append_text_to_file(const char *src, char *text)
+int append_text_to_file(const char *filename, char *text_content)
 {
-  int fd;
-  ssize_t l;
+	int lo, lw;
+	int l;
 
-  if (src == NULL)
-    return (-1);
-  fd = open(src, O_WRONLY | O_APPEND);
-  if (fd == -1)
-    return (-1);
-  if (text != NULL)
-    l = write(fd, text, _strlen(text));
-  close(fd);
-  if (l == -1)
-    return (-1);
-  return (1);
+	if (filename == NULL)
+		return (-1);
+	lo = open(filename, O_WRONLY | O_APPEND);
+	if (lo == -1)
+		return (-1);
+	if (text_content)
+	{
+		l = strlen(text_content);
+		lw = write(lo, text_content, l);
+		if (lw == -1)
+			return (-1);
+	}
+return (1);
 }

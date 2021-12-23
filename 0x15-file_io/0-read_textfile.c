@@ -2,38 +2,28 @@
 
 /**
  * read_textfile - Prints file text contents to stdout
- * @src: File name
- * @l: Length of text
+ * @filename: File name
+ * @letters: Length of text
  *
  * Return: Number of letters it could read and print
  */
-ssize_t read_textfile(const char *src, size_t l)
+ssize_t read_textfile(const char *filename, size_t letters)
 {
-  int fd;
-  ssize_t lr, lenw;
-  char *buffer;
+	ssize_t lo, lr, lw;
+	char *buffer = malloc(sizeof(char) * letters);
 
-  if (filename == NULL)
-    return (0);
-  fd = open(filename, O_RDONLY);
-  if (fd == -1)
-    return (0);
-  buffer = malloc(sizeof(char) * l);
-  if (buffer == NULL)
-    {
-      close(fd);
-      return (0);
-    }
-  lr = read(fd, buffer, l);
-  close(fd);
-  if (lr == -1)
-    {
-      free(buffer);
-      return (0);
-    }
-  lw = write(STDOUT_FILENO, buffer, lr);
-  free(buffer);
-  if (lr != lw)
-    return (0);
-  return (lw);
+	if (!filename == !buffer)
+		return (0);
+	lo = open(filename, O_RDONLY);
+	if (lo == -1)
+		return (0);
+	lr = read(lo, buffer, letters);
+	if (lr == -1)
+	{
+		return (0);
+	}
+	lw = write(STDOUT_FILENO, buff, lr);
+	close(lo);
+	free(buffer);
+	return (lw);
 }

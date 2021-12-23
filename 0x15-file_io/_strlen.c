@@ -8,7 +8,7 @@
 
 size_t _strlen(char *s)
 {
-  size_t len;
+  ssize_t len;
 
   len = 0;
 

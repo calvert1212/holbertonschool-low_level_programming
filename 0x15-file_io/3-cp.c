@@ -1,4 +1,4 @@
-include "main.h"
+#include "main.h"
 
 /**
  * main - Copies content of one file to another file
